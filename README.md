@@ -3,8 +3,10 @@ Little wrapper around hashcat so it can be installed via pip. Attempts to also c
 
 For the actual hashcat, please go to: https://hashcat.net/hashcat/
 
+NOTE: This version is meant to run the beta release of hashcat, and thus may be unstable. If things don't work, try the normal hashcat.
+
 # Quickstart
 ```bash
-$ pip install hashcat
+$ pip install hashcat-beta
 $ hashcat -h
 ```
