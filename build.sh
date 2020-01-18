@@ -66,6 +66,27 @@ rm -rf $DOWNDIR
 echo '[ OK ]'
 
 #
+# kwprocessor
+#
+
+KW_URL=`wget -O- -q https://github.com/hashcat/kwprocessor/releases/latest | grep \.7z | grep href | cut -f 2 -d '"'`
+KW_URL="https://github.com/${KW_URL}"
+KW_DIR="$DIR/hashcat/kwp"
+
+rm -rf $KW_DIR
+
+DOWNDIR=`mktemp -d`
+cd $DOWNDIR
+
+echo -n "Downloading $KW_URL ... "
+wget -O kw.7z -q $KW_URL
+7z x kw.7z &>/dev/null
+rm kw.7z
+mv * $KW_DIR
+rm -rf $DOWNDIR
+echo '[ OK ]'
+
+#
 # Sdist
 #
 

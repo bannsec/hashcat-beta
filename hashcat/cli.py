@@ -33,6 +33,9 @@ def cap2hccapx():
 
     main(program=cap2hccapx_exe_path, cwd=cap2hccapx_dir)
 
+def kwp():
+    main(program=kwp_exe_path, cwd=kwp_dir)
+
 #bits = platform.architecture()[0][:-3]
 bits = "" # Only 64-bit in beta releases apparently
 ext = ".exe" if platform.uname().system == "Windows" else ".bin"
@@ -50,6 +53,12 @@ pp_exe_path = os.path.join(pp_dir, pp_exe)
 cap2hccapx_dir = os.path.join(here, "utils", "bin")
 cap2hccapx_exe = "cap2hccapx"  + ext
 cap2hccapx_exe_path = os.path.join(cap2hccapx_dir, cap2hccapx_exe)
+
+kwp_dir = os.path.join(here, "kwp")
+kwp_exe = "kwp"
+if platform.uname().system == "Windows":
+    kwp_exe += platform.architecture()[0][:-3] + ".exe"
+kwp_exe_path = os.path.join(kwp_dir, kwp_exe)
 
 if __name__ == "__main__":
     main()
