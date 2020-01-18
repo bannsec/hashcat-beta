@@ -4,5 +4,6 @@ recursive-include hashcat/kwp/ *
 recursive-include hashcat/utils/ *
 include version
 include README.md
+include pypi.rst
 global-exclude *.swp
 global-exclude *.pyc
