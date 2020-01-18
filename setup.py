@@ -10,7 +10,7 @@ with open(os.path.join(here, "version"), "r") as f:
 
 #hashcat_url = "https://hashcat.net/files/hashcat-5.1.0.7z"
 
-with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(os.path.join(here, 'pypi.rst'), encoding='utf-8') as f:
     long_description = f.read()
 #long_description = "See website for more info."
 

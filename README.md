@@ -9,4 +9,7 @@ NOTE: This version is meant to run the beta release of hashcat, and thus may be 
 ```bash
 $ pip install hashcat-beta
 $ hashcat -h
+$ pp64 -h
+$ cap2hccapx -h
+$ kwp -h
 ```
