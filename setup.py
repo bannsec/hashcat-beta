@@ -38,6 +38,8 @@ setup(
     entry_points={
         'console_scripts': [
             'hashcat = hashcat.cli:main',
+            'pp64 = hashcat.cli:pp',
+            'pp = hashcat.cli:pp',
         ],
     },
     include_package_data = True,
