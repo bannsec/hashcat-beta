@@ -6,3 +6,4 @@ coverage/
 docs/_build/
 hashcat/hashcat/
 hashcat/pp/
+hashcat/utils/

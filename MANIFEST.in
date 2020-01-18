@@ -1,5 +1,6 @@
 recursive-include hashcat/hashcat/ *
 recursive-include hashcat/pp/ *
+recursive-include hashcat/utils/ *
 include version
 include README.md
 global-exclude *.swp

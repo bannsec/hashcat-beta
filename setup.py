@@ -40,6 +40,7 @@ setup(
             'hashcat = hashcat.cli:main',
             'pp64 = hashcat.cli:pp',
             'pp = hashcat.cli:pp',
+            'cap2hccapx = hashcat.cli:cap2hccapx',
         ],
     },
     include_package_data = True,

@@ -26,6 +26,7 @@ echo '[ OK ]'
 #
 # Prince
 #
+
 PRINCE_URL=`wget -O- -q https://github.com/hashcat/princeprocessor/releases/latest | grep -i \.7z | grep href | cut -f 2 -d '"'`
 PRINCE_URL="https://github.com/${PRINCE_URL}"
 PRINCE_DIR="$DIR/hashcat/pp"
@@ -43,6 +44,26 @@ mv * $PRINCE_DIR
 rm -rf $DOWNDIR
 echo '[ OK ]'
 
+#
+# Hashcat utils
+#
+
+UTILS_URL=`wget -O- -q https://github.com/hashcat/hashcat-utils/releases/latest | grep -i \.7z | grep href | cut -f 2 -d '"'`
+UTILS_URL="https://github.com/${UTILS_URL}"
+UTILS_DIR="$DIR/hashcat/utils"
+
+rm -rf $UTILS_DIR
+
+DOWNDIR=`mktemp -d`
+cd $DOWNDIR
+
+echo -n "Downloading $UTILS_URL ... "
+wget -O utils.7z -q $UTILS_URL
+7z x utils.7z &>/dev/null
+rm utils.7z
+mv * $UTILS_DIR
+rm -rf $DOWNDIR
+echo '[ OK ]'
 
 #
 # Sdist
